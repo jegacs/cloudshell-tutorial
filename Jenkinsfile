@@ -7,6 +7,8 @@ pipeline {
       APP_NAME          = 'cloudshell-tutorial'
       GIT_PROVIDER      = 'github.com'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
+      TILLER_NAMESPACE="kube-system"
+
     }
     stages {
       stage('CI Build and push snapshot') {
